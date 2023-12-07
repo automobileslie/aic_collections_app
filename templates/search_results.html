@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block main %}
+   <h2> Search Results for '{{search_term}}' </h2>
+   <ul>
+    {% for item in items %}
+        <li class="result">
+            <form action="/artwork_showpage" method="post">
+                <div>
+                    <input name="artwork_id" type="hidden" value="{{item['artwork_id']}}">
+                    <input name="search_term" type="hidden" value="{{search_term}}">
+                    <input name="page_number" type="hidden" value="{{page_number}}">
+                </div>
+                <button class="go-to-result-showpage" type="submit"> {{item['title']}} </button>
+            </form>
+        </li>
+    {% endfor %}
+   </ul>
+   <div class="page-navigation-container">
+        <form action="/search_results" method="post">
+            <div >
+                <input name="page_number_beginning" type="hidden" value="{{page_number}}">
+                <input name="search_term" type="hidden" value="{{search_term}}">
+                <input name="page_number" type="hidden" value="{{page_number}}">
+            </div>
+            <button class="navigation-buttons" type="submit"> << </button>
+        </form>
+        <form action="/search_results" method="post">
+            <div >
+                <input name="page_number_minus" type="hidden" value="{{page_number}}">
+                <input name="search_term" type="hidden" value="{{search_term}}">
+                <input name="page_number" type="hidden" value="{{page_number}}">
+            </div>
+            <button type="submit"> <</button>
+        </form>
+        <p class="current-page"> page {{page_number}} of {{page_limit}} </p>
+        <form action="/search_results" method="post">
+            <div >
+                <input name="page_number_plus" type="hidden" value="{{page_number}}">
+                <input name="search_term" type="hidden" value="{{search_term}}">
+                <input name="page_number" type="hidden" value="{{page_number}}">
+            </div>
+            <button class="navigation-buttons" type="submit"> ></button>
+        </form>
+        <form action="/search_results" method="post">
+            <div>
+                <input name="page_number_end" type="hidden" value="{{page_limit}}">
+                <input name="search_term" type="hidden" value="{{search_term}}">
+                <input name="page_number" type="hidden" value="{{page_number}}">
+            </div>
+            <button type="submit"> >> </button>
+        </form>
+    </div>
+{% endblock %}

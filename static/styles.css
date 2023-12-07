@@ -1,0 +1,183 @@
+.result {
+    text-align: left;
+}
+
+.search-button {
+    margin-top: 10px;
+}
+
+.go-to-result-showpage{
+    border: none;
+    background-color: white;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.go-to-result-showpage:hover{
+    color: purple;
+}
+
+.back-button{
+    margin-top: 10px;
+}
+
+.page-navigation-container{
+    display: flex;
+    justify-content: center;
+}
+
+.current-page{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navigation-buttons{
+    margin-right: 2px;
+}
+
+@media screen and (min-width: 1000px) {
+    .welcome-page-message{
+        margin-right: 15%;
+        margin-left: 15%;
+        font-size: 1.25rem;
+        color: grey;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .welcome-page-message{
+        margin-right: 10%;
+        margin-left: 10%;
+        font-size: 1rem;
+        color: grey;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .welcome-page-message{
+        margin-right: 3%;
+        margin-left: 3%;
+        font-size: 1rem;
+        color: grey;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .welcome-page-message{
+        margin-right: 1%;
+        margin-left: 1%;
+        color: grey;
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+
+.error-message{
+    color: grey;
+}
+
+.collected-works-showpage-image{
+    max-width: 400px;
+}
+
+.artwork-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artwork-tile{
+    background-color: #D3D3D3 ;
+    margin: 5px;
+    padding: 20px;
+}
+
+.artwork-tile-title{
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.artwork-tile-title:hover{
+    color: #717E8E;
+}
+
+.artwork-tile-info{
+    margin-top: 2px;
+    color: grey;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 450px) {
+    .collected-works-showpage-image{
+      max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .collected-works-showpage-image{
+      max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .collected-works-showpage-image{
+      max-width: 200px;
+    }
+}
+
+.create-new-collection-container {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.collections-page-container{
+    margin-left: 20px;
+}
+
+.new-collection-button{
+    margin-top: 10px;
+}
+
+.collection-page-header{
+    text-align: left;
+}
+
+.delete-collection-button{
+    margin-top: 10px;
+}
+
+.showpage-image{
+    max-width: 650px;
+}
+
+@media screen and (max-width: 700px) {
+    .showpage-image{
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .showpage-image{
+        max-width: 95%;
+    }
+}
+
+.artwork-showpage-title-and-date{
+    margin-top: 2%;
+}
+
+.link-to-art-institute{
+    margin-bottom: 2%;
+}
+
+#app-title{
+    color: #2F4F4F;
+}
+
+.header-for-welcome-message{
+    color: #2F4F4F;
+    margin-bottom: 2%;
+}

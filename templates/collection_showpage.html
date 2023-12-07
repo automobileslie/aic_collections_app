@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}
+    Collection Showpage
+{% endblock %}
+
+{% block main %}
+    <h2>{{collection_title}}</h2>
+        <div class="artwork-container">
+            {% for artwork in artworks %}
+                <div class="artwork-tile">
+                    <img class="collected-works-showpage-image" src="{{artwork['display_url']}}" alt="{{artwork['alt_text']}}">
+                    <form action="/collection_artwork_showpage" method="post">
+                        <input type="hidden" name="collection_id" value="{{collection_id}}">
+                        <input type="hidden" name="artwork_id" value="{{artwork['artwork_id']}}">
+                        <h6> <button type="submit" class="artwork-tile-title">{{artwork['title']}}</button></h6>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}

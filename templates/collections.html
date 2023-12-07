@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}
+    Collections Page
+{% endblock %}
+
+{% block main %}
+ <div class="collections-page-container">
+   <h1 class="collection-page-header">Collections</h1>
+   <ul>
+    {% for collection in collections %}
+    <li class="result">
+      <form action="/collection_showpage" method="post">
+        <div>
+            <input name="collection_id" type="hidden" value="{{collection['id']}}">
+        </div>
+        <button class="go-to-result-showpage" type="submit"> {{collection['title']}} </button>
+      </form>
+    </li>
+    {% endfor %}
+   </ul>
+
+   <div class="create-new-collection-container">
+    <h3>Create a new collection</h3>
+    <form action="/collections" method="post">
+        <div>
+            <input autocomplete="off" name="create-new-collection" type="text" placeholder="New Collection Title">
+        </div>
+        <p><button class="new-collection-button" type="submit"> Create Collection </button></p>
+    </form>
+  </div>
+
+  <div class="create-new-collection-container">
+    <h3>Delete a collection</h3>
+    <form action="/delete_collection" method="post">
+      <select name="collection-delete-select">
+        <option disabled selected>Collection</option>
+        {% for collection in collections %}
+            <option value="{{collection['id']}}">{{ collection['title'] }}</option>
+        {% endfor %}
+    </select>
+        <p><button class="delete-collection-button" type="submit"> Delete Collection </button></p>
+    </form>
+  </div>
+ </div>
+{% endblock %}

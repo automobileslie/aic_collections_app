@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+    Search Page
+{% endblock %}
+
+{% block main %}
+   <h1> Search </h1>
+   <form action="/search" method="post">
+    <div >
+        <input name="search" type="text">
+    </div>
+    <button class="search-button" type="submit"> Submit </button>
+</form>
+{% endblock %}

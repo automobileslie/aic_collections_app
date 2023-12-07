@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+    Artwork Showpage from Collection
+{% endblock %}
+
+{% block main %}
+ <div>
+    <img class="showpage-image" src="{{artwork['display_url']}}" alt="{{alt_text}}">
+        <p class="artwork-showpage-title-and-date"> {{ artwork['title'] }} ({{ artwork['date_info'] }})</p>
+        <p>{{artwork['artist_info']}}</p>
+        <p class="link-to-art-institute"><a href="{{artwork['art_institute_url']}}" target="_blank"> View on the Art Institute of Chicago Website </a></p>
+
+    <form action="/collection_artwork_showpage" method="post">
+        <input name="collection_id" type="hidden" value="{{collection_id}}">
+        <input name="artwork_id" type="hidden" value="{{artwork['artwork_id']}}">
+        <input name="remove-artwork-from-collection" type="hidden" value="{{artwork['artwork_id']}}">
+        <button type="submit">Remove from Collection</button>
+    </form>
+
+    <form action="/collection_showpage" method="post">
+        <input name="collection_id" type="hidden" value="{{collection_id}}">
+        <p><button name="go-back-to-collection" class="back-button" type="submit"> Back to Collection</button></p>
+    </form>
+ </div>
+{% endblock %}

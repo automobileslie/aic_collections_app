@@ -19,6 +19,10 @@
 
 ## II. Description of the User Experience:
 
+### Getting the Application Up and Running:
+    After cloning the repository and navigating to it in your file directory, 
+    enter "flask run" in the terminal to start the server.
+
 ### Searching:
     After registering and logging in, going to 'Search' in the navigation bar
     will take you to the search route where you can enter a search term
@@ -42,12 +46,12 @@
 
     On that showpage, the user can add the item to a collection.
     There is a select menu with the first option being the search term
-    and the rest of the options being being the titles of collections that the user already has.
+    and the rest of the options being the titles of collections that the user already has.
 
     If the search term is selected from the options and is not already the name of a collection,
     a collection will be created with the search term as the title.
 
-    After adding a work to a collection, users are taken back to the results page where they were before after.
+    After adding a work to a collection, users are taken back to the results page where they were before.
 
     In the case that they do not want to select the artwork for a collection,
     there is also a back button to take them back to the last search results page they were on.

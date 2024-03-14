@@ -23,6 +23,7 @@
     Install Python
     Install Flask-Session
     Install python-dotenv
+    
     After cloning the repository and navigating to it in your file directory, 
     enter "DB_PATH=aic_collections.db flask run" in the terminal to start the server.
 

@@ -20,8 +20,11 @@
 ## II. Description of the User Experience:
 
 ### Getting the Application Up and Running:
+    Install Python
+    Install Flask-Session
+    Install python-dotenv
     After cloning the repository and navigating to it in your file directory, 
-    enter "flask run" in the terminal to start the server.
+    enter "DB_PATH=aic_collections.db flask run" in the terminal to start the server.
 
 ### Searching:
     After registering and logging in, going to 'Search' in the navigation bar
